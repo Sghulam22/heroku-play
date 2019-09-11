@@ -1,0 +1,19 @@
+.title{
+	text-align:center;
+	}
+	
+body{
+				background-image: url("wordwallpaper.JPG");
+				background-position:fixed;
+				background-size: cover;
+				}
+				
+li{
+	white-space:nowrap;
+	display:inline-block;
+	margin: 0 0 20px 20px;
+}
+
+.answersdiv{
+	text-align:center;
+}
