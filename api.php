@@ -14,7 +14,7 @@
     $query = "SELECT rack, words FROM racks WHERE length=7 and weight <= 10 order by random() limit 0, 1";  
      $query = 'SELECT rack, words FROM racks WHERE rack="potato"';
     
-    print_r($query);
+    print_r($myrack);
     
     //this next line could actually be used to provide user_given input to the query to 
     //avoid SQL injection attacks
