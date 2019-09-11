@@ -1,0 +1,109 @@
+<!-- 9/5/19-->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>word search</title>
+	<link rel = 'stylesheet' href = 'wg.css'>
+<body>
+
+<h1 class ="title">welcome to my word search</h1>
+
+<div class="answersdiv">
+<ul>
+	<li><h2 id="showme1">...&emsp; 	</h2></li>
+	<li><h2 id="showme2">...&emsp;	</h2></li>
+	<li><h2 id="showme3">...&emsp;	</h2></li>
+	<li><h2 id="showme4">...&emsp;	</h2></li>
+	<li><h2 id="showme5">...&emsp;	</h2></li>
+	<li><h2 id="showme6">...&emsp;	</h2></li>
+	<li><h2 id="showme7">...&emsp;	</h2></li>
+	</ul>
+	<br/>
+	
+	<input class="input" type="text" id="val" placeholder="enter word" position="fixed"/> 
+	<button onclick="input()">Try it</button>
+	</div>
+	
+<script>
+
+var correctWords= new Array("help","try","fly", "smart", "right", "up", "stuff" ); 
+var recheck= new Array("help","try","fly", "smart", "right", "up", "stuff"); 
+function input(){
+  var x = document.getElementById("val").value;
+  var check=0;
+  var i=0;
+  var temp;
+  while(i<7)
+  {
+	if(x==correctWords[i])
+	{
+	temp=i;
+	
+
+	check=1;
+	alert("correct");
+	//correctWords.splice(i, 1); 
+	correctWords[i]="erased/null";
+	}
+	i++;
+  }
+  
+  //check to see which word was entered in which position
+
+	  if(temp==0)
+	  {
+		document.getElementById("showme1").innerHTML = x;
+	  }
+		else if(temp==1)
+	  {
+		document.getElementById("showme2").innerHTML = x;
+	  }
+	   else if(temp==2)
+	  {
+		document.getElementById("showme3").innerHTML = x;
+	  }
+	   else if(temp==3)
+	  {
+		document.getElementById("showme4").innerHTML = x;
+	  }
+	   else if(temp==4)
+	  {
+		document.getElementById("showme5").innerHTML = x;
+	  }
+	   else if(temp==5)
+	  {
+		document.getElementById("showme6").innerHTML = x;
+	  }
+	   else if(temp==6)
+	  {
+		document.getElementById("showme7").innerHTML = x;
+	  }
+
+  
+  
+ i=0;
+ 
+ //check to see if word was already entered before or if word is incorrect
+if (check==0)
+{
+while(i<7)
+  {
+	if(x==recheck[i])
+	{
+		check=1;
+	}
+	i++;
+	}
+	if(check==1)
+	{
+		alert("you have already entered this word");
+	}
+	else if(check ==0){
+		alert("incorrect try again please");
+	}
+}
+}
+</script>
+</body>
+</html>
