@@ -12,7 +12,7 @@
     $mywords=[];
 
     $query = "SELECT rack, words FROM racks WHERE length=7 and weight <= 10 order by random() limit 0, 1";  
-     $query = 'SELECT rack, words FROM racks WHERE rack="potato"';
+  //   $query = 'SELECT rack, words FROM racks WHERE rack="potato"';
     
     print_r($myrack);
     print_r($query);    
