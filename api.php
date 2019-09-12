@@ -15,7 +15,7 @@
      $query = 'SELECT rack, words FROM racks WHERE rack="potato"';
     
     print_r($myrack);
-    
+    print_r($query);    
     //this next line could actually be used to provide user_given input to the query to 
     //avoid SQL injection attacks
     $statement = $dbhandle->prepare($query);
