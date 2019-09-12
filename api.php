@@ -15,6 +15,7 @@
   //   $query = 'SELECT rack, words FROM racks WHERE rack="potato"';
     
     print_r($myrack);
+    echo '<br/>';
     print_r($query);    
     //this next line could actually be used to provide user_given input to the query to 
     //avoid SQL injection attacks
@@ -26,6 +27,8 @@
     //I chose to get associative arrays inside of a big array
     //this will naturally create a pleasant array of JSON data when I echo in a couple lines
     $results = $statement->fetchAll(PDO::FETCH_ASSOC);
+    echo '<br/>';
+    print_r($results);
     
     //this part is perhaps overkill but I wanted to set the HTTP headers and status code
     //making to this line means everything was great with this request
