@@ -11,6 +11,7 @@
     // ordering by rank, etc.
     $query = "SELECT rack, words FROM racks WHERE length=7 and weight <= 10 order by random() limit 0, 1";
     $query2 = "SELECT rack, words FROM racks WHERE length=7 and weight <= 10 order by random() limit 0, 1";
+    $query3 = 'SELECT rack, words FROM racks WHERE rack="hlleo"';
     
     //this next line could actually be used to provide user_given input to the query to 
     //avoid SQL injection attacks 
@@ -20,6 +21,10 @@
     $s2= $dbhandle->prepare($query2);
     $s2->execute();
     $r1= $s2->fetchAll(PDO::FETCH_ASSOC);
+   
+    $s3= $dbhandle->prepare($query3);
+    $s3->execute();
+    $r2= $s3->fetchAll(PDO::FETCH_ASSOC);
     
     
     //The results of the query are typically many rows of data
@@ -27,6 +32,8 @@
     //I chose to get associative arrays inside of a big array
     //this will naturally create a pleasant array of JSON data when I echo in a couple lines
     $results = $statement->fetchAll(PDO::FETCH_ASSOC);
+    print_r("last rack");
+    print_r($r2[0]["rack"]);
     print_r("second rack:");
     print_r($r1[0]["rack"]);
     $r=$results[0]["rack"];
@@ -56,8 +63,8 @@
              // starting point to current ending 
              // point.  
              $j = $i + $len - 1;          
-             for ($k = $i; $k <= $j; $k++) 
-             // $query = 'SELECT rack, words FROM racks WHERE rack ="$str[$k]"';
+             for ($k = $i; $k <= $j; $k++) {
+              //$query = 'SELECT rack, words FROM racks WHERE rack ="$str[$k]"';
               //$statement = $dbhandle->prepare($query);
               //$statement->execute();
               //$results = $statement->fetchAll(PDO::FETCH_ASSOC);
@@ -65,7 +72,8 @@
               //print_r($results[0]["words"]);
     
               print_r($str[$k]); 
-         
+              
+             }
               
             echo "\n"; 
          } 
