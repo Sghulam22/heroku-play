@@ -83,7 +83,7 @@
 //     // Driver Code 
 //     $str = "abc"; 
      subString($r, strlen($r)); 
-
+ 
    //this part is perhaps overkill but I wanted to set the HTTP headers and status code
     //making to this line means everything was great with this request
     header('HTTP/1.1 200 OK');
