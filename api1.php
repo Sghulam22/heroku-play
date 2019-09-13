@@ -29,6 +29,7 @@
     $final=explode("&&",$arr); 
     print_r("exploding is done");
     print_r($final);
+    print_r($final);
     print_r("hello");
    //this part is perhaps overkill but I wanted to set the HTTP headers and status code
     //making to this line means everything was great with this request
