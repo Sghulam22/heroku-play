@@ -36,7 +36,7 @@
     
     print_r("printing the string that has all the answers:");
     print_r($arr);
-    print_r("exploding in progress");
+    print_r("exploding in progress"); 
     $final=explode("@@",$arr); 
     print_r("exploding is done");
     print_r($final);
