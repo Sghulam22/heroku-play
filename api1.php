@@ -24,7 +24,7 @@
    
     $r=$results[0]["rack"];
     print_r($r);
-    $arr=$results[0]["words"];
+    $arr=$results[0]["words"]; 
     
     print_r("printing the string that has all the answers:");
     print_r($arr);
