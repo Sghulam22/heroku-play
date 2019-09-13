@@ -22,7 +22,7 @@
     //this will naturally create a pleasant array of JSON data when I echo in a couple lines
     $results = $statement->fetchAll(PDO::FETCH_ASSOC);
    
-    $r=$results[0];
+    $r=$results[0]["rack"];
     print_r($r);
     $arr=$results[0]["words"];
     
