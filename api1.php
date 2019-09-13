@@ -23,7 +23,7 @@
     $results = $statement->fetchAll(PDO::FETCH_ASSOC);
 
     $arr=$results[0]["words"];
-    $print_r($results);
+    
     print_r($arr[0]);
     print_r("printing the string that has all the answers:");
     print_r($arr);
@@ -31,7 +31,7 @@
     $final=explode("@@",$arr); 
     print_r("exploding is done");
     print_r($final);
-    echo '<br>';
+ 
 
    //this part is perhaps overkill but I wanted to set the HTTP headers and status code
     //making to this line means everything was great with this request
