@@ -21,7 +21,7 @@
     //I chose to get associative arrays inside of a big array
     //this will naturally create a pleasant array of JSON data when I echo in a couple lines
     $results = $statement->fetchAll(PDO::FETCH_ASSOC);
-
+    print_r($query);
     $arr=$results[0]["words"];
     
     print_r($arr[0]);
