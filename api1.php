@@ -49,12 +49,14 @@
     $final=explode("@@",$arr); 
     print_r("exploding is done");
     print_r($final);
+
+    $store;
     
      function subString($str, $n)  
      { 
       
      // Pick starting point 
-     for($len = 1; $len <= $n; $len++)  
+     for($len = 2; $len <= $n; $len++)  
      {  
           
         // Pick ending point 
