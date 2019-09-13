@@ -24,7 +24,9 @@
 
     $arr=$results[0]["words"];
     //print_r($arr);
+    print_r("exploding in progress");
     $final=explode("&&",$arr); 
+    print_r("exploding is done");
     print_r($final);
     print_r("hello");
    //this part is perhaps overkill but I wanted to set the HTTP headers and status code
