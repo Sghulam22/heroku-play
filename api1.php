@@ -10,18 +10,25 @@
     // you might want to consider taking more results, implementing "pagination", 
     // ordering by rank, etc.
     $query = "SELECT rack, words FROM racks WHERE length=7 and weight <= 10 order by random() limit 0, 1";
+    $query2 = "SELECT rack, words FROM racks WHERE length=7 and weight <= 10 order by random() limit 0, 1";
     
     //this next line could actually be used to provide user_given input to the query to 
     //avoid SQL injection attacks 
     $statement = $dbhandle->prepare($query);
     $statement->execute();
+
+    $s2= $dbhandle->prepare($query);
+    $s2->execute();
+    $r1= $statement->fetchAll(PDO::FETCH_ASSOC);
+    
     
     //The results of the query are typically many rows of data
     //there are several ways of getting the data out, iterating row by row,
     //I chose to get associative arrays inside of a big array
     //this will naturally create a pleasant array of JSON data when I echo in a couple lines
     $results = $statement->fetchAll(PDO::FETCH_ASSOC);
-   
+    print_r("second rack:");
+    print_r($r1[0]["rack"]);
     $r=$results[0]["rack"];
     print_r($r);
     $arr=$results[0]["words"]; 
