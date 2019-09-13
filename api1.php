@@ -23,7 +23,7 @@
     $results = $statement->fetchAll(PDO::FETCH_ASSOC);
 
     $arr=$results[0]["words"];
-    //print_r($arr);
+    print_r($arr);
     print_r("exploding in progress");
     $final=explode("&&",$arr); 
     print_r("exploding is done");
