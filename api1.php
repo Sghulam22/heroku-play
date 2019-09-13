@@ -36,7 +36,7 @@
     print_r($r2[0]["rack"]);
     print_r($r2);
     print_r("second rack:");
-    print_r($r1[0]["rack"]);
+    print_r($r1[0]["rack"]); 
     $r=$results[0]["rack"];
     print_r("first rack");
     print_r($r);
