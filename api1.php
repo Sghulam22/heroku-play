@@ -23,6 +23,7 @@
     $results = $statement->fetchAll(PDO::FETCH_ASSOC);
 
     $arr=$results[0]["words"];
+    $print_r($results);
     print_r($arr[0]);
     print_r("printing the string that has all the answers:");
     print_r($arr);
