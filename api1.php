@@ -41,32 +41,32 @@
     {  
           
         // Pick ending point 
-        for ($i = 0; $i <= $n - $len; $i++)  
-        { 
+//         for ($i = 0; $i <= $n - $len; $i++)  
+//         { 
               
-            // Print characters from current 
-            // starting point to current ending 
-            // point.  
-            $j = $i + $len - 1;          
-            for ($k = $i; $k <= $j; $k++) 
-             $query = 'SELECT rack, words FROM racks WHERE rack ="$str[$k]"';
-             $statement = $dbhandle->prepare($query);
-             $statement->execute();
-             $results = $statement->fetchAll(PDO::FETCH_ASSOC);
-             print_r($results[0]["rack"]);
-             print_r($results[0]["words"]);
+//             // Print characters from current 
+//             // starting point to current ending 
+//             // point.  
+//             $j = $i + $len - 1;          
+//             for ($k = $i; $k <= $j; $k++) 
+//              $query = 'SELECT rack, words FROM racks WHERE rack ="$str[$k]"';
+//              $statement = $dbhandle->prepare($query);
+//              $statement->execute();
+//              $results = $statement->fetchAll(PDO::FETCH_ASSOC);
+//              print_r($results[0]["rack"]);
+//              print_r($results[0]["words"]);
     
-             print_r($str[$k]); echo ",           "; 
+//              print_r($str[$k]); 
          
               
-            echo "\n"; 
-        } 
-    } 
-} 
+//             echo "\n"; 
+//         } 
+//     } 
+// } 
   
-    // Driver Code 
-    $str = "abc"; 
-    subString($r, strlen($r)); 
+//     // Driver Code 
+//     $str = "abc"; 
+//     subString($r, strlen($r)); 
 
    //this part is perhaps overkill but I wanted to set the HTTP headers and status code
     //making to this line means everything was great with this request
