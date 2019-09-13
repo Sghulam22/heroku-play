@@ -84,7 +84,7 @@
   
 //     // Driver Code 
 //     $str = "abc"; 
-     subString($r, strlen($r)); 
+     subString($temp, strlen($temp)); 
  
    //this part is perhaps overkill but I wanted to set the HTTP headers and status code
     //making to this line means everything was great with this request
