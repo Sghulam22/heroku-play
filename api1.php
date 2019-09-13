@@ -71,7 +71,7 @@
               //$results = $statement->fetchAll(PDO::FETCH_ASSOC);
               //print_r($results[0]["rack"]);
               //print_r($results[0]["words"]);
-    
+     
               print_r($str[$k]); 
               
              }
