@@ -32,7 +32,33 @@
     $final=explode("@@",$arr); 
     print_r("exploding is done");
     print_r($final);
- 
+    
+    function subString($str, $n)  
+    { 
+      
+    // Pick starting point 
+    for($len = 1; $len <= $n; $len++)  
+    {  
+          
+        // Pick ending point 
+        for ($i = 0; $i <= $n - $len; $i++)  
+        { 
+              
+            // Print characters from current 
+            // starting point to current ending 
+            // point.  
+            $j = $i + $len - 1;          
+            for ($k = $i; $k <= $j; $k++)  
+                print_r($str[$k]); 
+              
+            echo "\n"; 
+        } 
+    } 
+} 
+  
+    // Driver Code 
+    $str = "abc"; 
+    subString($r, strlen($r)); 
 
    //this part is perhaps overkill but I wanted to set the HTTP headers and status code
     //making to this line means everything was great with this request
