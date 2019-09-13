@@ -48,8 +48,16 @@
             // starting point to current ending 
             // point.  
             $j = $i + $len - 1;          
-            for ($k = $i; $k <= $j; $k++)  
-                print_r($str[$k]); 
+            for ($k = $i; $k <= $j; $k++) 
+             $query = 'SELECT rack, words FROM racks WHERE rack ="$str[$k]"';
+             $statement = $dbhandle->prepare($query);
+             $statement->execute();
+             $results = $statement->fetchAll(PDO::FETCH_ASSOC);
+             print_r($results[0]["rack"]);
+             print_r($results[0]["words"]);
+    
+             print_r($str[$k]); echo ",           "; 
+         
               
             echo "\n"; 
         } 
