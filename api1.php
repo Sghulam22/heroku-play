@@ -49,44 +49,50 @@
     $final=explode("@@",$arr); 
     print_r("exploding is done");
     print_r($final);
-
-    $store;
-    
-     function subString($str, $n)  
-     { 
-      
-     // Pick starting point 
-     for($len = 2; $len <= $n; $len++)  
-     {  
-          
-        // Pick ending point 
-         for ($i = 0; $i <= $n - $len; $i++)  
-         { 
-             
-             // Print characters from current 
-             // starting point to current ending 
-             // point.  
-             $j = $i + $len - 1;          
-             for ($k = $i; $k <= $j; $k++) {
-              //$query = 'SELECT rack, words FROM racks WHERE rack ="$str[$k]"';
-              //$statement = $dbhandle->prepare($query);
-              //$statement->execute();
-              //$results = $statement->fetchAll(PDO::FETCH_ASSOC);
-              //print_r($results[0]["rack"]);
-              //print_r($results[0]["words"]);
      
-              print_r($str[$k]); 
+    for ($i = 0; $i < strlen($temp); $i++) {
+    for (int $j = $i+1; $j <= strlen($temp); $j++) {
+    print_r(substr($temp, $i, $j));
+    }
+    }
+    
+//      function subString($str, $n)  
+//      { 
+//       $p=
+      
+//      // Pick starting point 
+//      for($len = 2; $len <= $n; $len++)  
+//      {  
+          
+//         // Pick ending point 
+//          for ($i = 0; $i <= $n - $len; $i++)  
+//          { 
+             
+//              // Print characters from current 
+//              // starting point to current ending 
+//              // point.  
+//              $j = $i + $len - 1;          
+//              for ($k = $i; $k <= $j; $k++) {
               
-             }
+//               //$query = 'SELECT rack, words FROM racks WHERE rack ="$str[$k]"';
+//               //$statement = $dbhandle->prepare($query);
+//               //$statement->execute();
+//               //$results = $statement->fetchAll(PDO::FETCH_ASSOC);
+//               //print_r($results[0]["rack"]);
+//               //print_r($results[0]["words"]);
               
-            echo "\n"; 
-         } 
-     } 
- } 
+//               print_r($str[$k]); 
+              
+//              }
+              
+//             echo "\n"; 
+//          } 
+//      } 
+//  } 
   
-//     // Driver Code 
-//     $str = "abc"; 
-     subString($temp, strlen($temp)); 
+// //     // Driver Code 
+// //     $str = "abc"; 
+//      subString($temp, strlen($temp)); 
  
    //this part is perhaps overkill but I wanted to set the HTTP headers and status code
     //making to this line means everything was great with this request
