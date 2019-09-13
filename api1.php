@@ -35,7 +35,7 @@
     $results = $statement->fetchAll(PDO::FETCH_ASSOC);
     print_r("last rack");
     print_r($r2[0]["rack"]);
-    print_r($r2);
+    print_r($r2); 
     print_r("second rack:");
     print_r($r1[0]["rack"]); 
     $r=$results[0]["rack"];
