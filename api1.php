@@ -33,12 +33,12 @@
     print_r("exploding is done");
     print_r($final);
     
-    function subString($str, $n)  
-    { 
+//     function subString($str, $n)  
+//     { 
       
-    // Pick starting point 
-    for($len = 1; $len <= $n; $len++)  
-    {  
+//     // Pick starting point 
+//     for($len = 1; $len <= $n; $len++)  
+//     {  
           
         // Pick ending point 
 //         for ($i = 0; $i <= $n - $len; $i++)  
