@@ -11,7 +11,7 @@
     // ordering by rank, etc.
     $query = "SELECT rack, words FROM racks WHERE length=7 and weight <= 10 order by random() limit 0, 1";
     $query2 = "SELECT rack, words FROM racks WHERE length=7 and weight <= 10 order by random() limit 0, 1";
-    $query3 = 'SELECT rack, words FROM racks WHERE rack="hlleo"';
+    $query3 = 'SELECT rack, words FROM racks WHERE rack="sptiud"';
     
     //this next line could actually be used to provide user_given input to the query to 
     //avoid SQL injection attacks 
