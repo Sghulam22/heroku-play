@@ -65,6 +65,7 @@ for($i = 0; $i < pow(2, strlen($temp)); $i++){
 	if (strlen($ans) > 1){
   	    $racks[] = $ans;	
 	}
+	
 }
 $racks = array_unique($racks);
 print_r($racks);
@@ -82,9 +83,22 @@ for($i=0;$i<$count;$i++)
 	 $temp_var=$r1[0]["words"];
 	if(strlen($temp_var)>0)
 	{
-		$answers[]=$temp_var;
+		$holder_of_things=explode("@@",$temp_var);
+		if(sizeof($holder_of_things)>1)
+		{
+			for($k=0;$k<sizeof($holder_of_things);$k++)
+			{
+					$answers[]=$holder_of_things[$k];
+			}
+		}
+		else
+		{
+			$answers[]=$holder_of_things;
+		}
+		
 	}
 }
+
 
 	print_r($answers);
    //this part is perhaps overkill but I wanted to set the HTTP headers and status code
