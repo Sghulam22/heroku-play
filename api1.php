@@ -33,22 +33,7 @@
     //I chose to get associative arrays inside of a big array
     //this will naturally create a pleasant array of JSON data when I echo in a couple lines
     $results = $statement->fetchAll(PDO::FETCH_ASSOC);
-    print_r("last rack");
-    print_r($r2[0]["rack"]);
-    print_r($r2); 
-    print_r("second rack:");
-    print_r($r1[0]["rack"]); 
-    $r=$results[0]["rack"];
-    print_r("first rack");
-    print_r($r);
-    $arr=$results[0]["words"]; 
-    
-    print_r("printing the string that has all the answers:");
-    print_r($arr);
-    print_r("exploding in progress"); 
-    $final=explode("@@",$arr); 
-    print_r("exploding is done");
-    print_r($final);
+
      print_r("using subset function");
     
       
@@ -109,12 +94,11 @@ for($i=0;$i<$count;$i++)
 	printf("printing final array");
 	print_r($final_a);
 
-	print_r($answers);
    //this part is perhaps overkill but I wanted to set the HTTP headers and status code
     //making to this line means everything was great with this request
     header('HTTP/1.1 200 OK');
     //this lets the browser know to expect json
     header('Content-Type: application/json');
     //this creates json and gives it back to the browser
-    echo json_encode($results);     
+    echo json_encode($final_a);     
 ?>  
