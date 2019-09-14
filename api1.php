@@ -9,7 +9,7 @@
     //the limit 0, 10 takes the first 10 results.
     // you might want to consider taking more results, implementing "pagination", 
     // ordering by rank, etc.
-    $temp="ARSST"; 
+    $temp="ARPST"; 
     $query = "SELECT rack, words FROM racks WHERE length=7 and weight <= 10 order by random() limit 0, 1";
     $query2 = "SELECT rack, words FROM racks WHERE length=7 and weight <= 10 order by random() limit 0, 1";
     $query3 = "SELECT rack, words FROM racks WHERE rack='$temp'";
