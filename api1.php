@@ -52,15 +52,22 @@
      print_r("using subset function");
     
       
-   for ($i = 0; $i < strlen($temp); $i++) {
-    for ($j = $i+1; $j <= strlen($temp); $j++) {
-   $stringParts = str_split(substr($temp, $i, $j));
-    sort($stringParts);
-    $tempss=implode('',$stringParts);
-     echo "$tempss"; 
-     echo"\n";
-    }
-    }
+   
+$racks = [];
+for($i = 0; $i < pow(2, strlen($temp)); $i++){
+	$ans = "";
+	for($j = 0; $j < strlen($temp); $j++){
+		//if the jth digit of i is 1 then include letter
+		if (($i >> $j) % 2) {
+		  $ans .= $temp[$j];
+		}
+	}
+	if (strlen($ans) > 1){
+  	    $racks[] = $ans;	
+	}
+}
+$racks = array_unique($racks);
+print_r($racks);
     //for ($i = 0; $i < strlen($temp); $i++) {
      //for ($j = $i+1; $j <= strlen($temp); $j++) {
    
