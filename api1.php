@@ -16,7 +16,7 @@
      
     //this next line could actually be used to provide user_given input to the query to 
     //avoid SQL injection attacks 
-    $statement = $dbhandle->prepare($query);
+    $statement = $dbhandle->prepare($query); 
     $statement->execute();
 
     $s2= $dbhandle->prepare($query2);
