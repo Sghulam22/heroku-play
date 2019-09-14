@@ -3,7 +3,7 @@
 	}
 	
 body{
-				background-image: url("wordwallpaper.JPG");
+				background-image: url('wordwallpaper.JPG');
 				background-position:fixed;
 				background-size: cover;
 				}
