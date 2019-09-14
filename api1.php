@@ -52,12 +52,19 @@
      print_r("using subset function");
     
       
-    $formatted = implode(' ',str_split($temp)); 
-     print_r($formatted);
-//     for ($i = 0; $i < strlen($temp); $i++) {
-//     for ($j = $i+1; $j <= strlen($temp); $j++) {
+   for ($i = 0; $i < strlen($temp); $i++) {
+    for ($j = $i+1; $j <= strlen($temp); $j++) {
+   $stringParts = str_split(substr($temp, $i, $j));
+    sort($stringParts);
+    $tempss=implode('',$stringParts);
+     echo "$tempss"; 
+     echo"\n";
+    }
+    }
+    //for ($i = 0; $i < strlen($temp); $i++) {
+     //for ($j = $i+1; $j <= strlen($temp); $j++) {
    
-//    $stringParts = str_split(substr($temp, $i, $j));
+    //$stringParts = str_split(substr($temp, $i, $j));
 //      sort($stringParts);
 //     $tempss=implode('',$stringParts);
 //      echo "$tempss"; 
