@@ -102,7 +102,7 @@ for($i=0;$i<$count;$i++)
  		}
  		else
  		{
- 			$final_a[]=$holder_of_things;
+ 			$final_a[]=$holder_of_things[0];
  		}
 		
 	}
