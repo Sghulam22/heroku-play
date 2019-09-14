@@ -26,7 +26,7 @@
     $s3= $dbhandle->prepare($query3);
     $s3->execute();
     $r2= $s3->fetchAll(PDO::FETCH_ASSOC);
-    
+     
     
     //The results of the query are typically many rows of data
     //there are several ways of getting the data out, iterating row by row,
