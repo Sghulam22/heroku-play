@@ -9,7 +9,7 @@
     //the limit 0, 10 takes the first 10 results.
     // you might want to consider taking more results, implementing "pagination", 
     // ordering by rank, etc.
-    $temp="ARPST"; 
+    $temp="ABCD"; 
     $query = "SELECT rack, words FROM racks WHERE length=7 and weight <= 10 order by random() limit 0, 1";
     $query2 = "SELECT rack, words FROM racks WHERE length=7 and weight <= 10 order by random() limit 0, 1";
     $query3 = "SELECT rack, words FROM racks WHERE rack='$temp'";
@@ -50,16 +50,20 @@
     print_r("exploding is done");
     print_r($final);
      print_r("using subset function");
-    for ($i = 0; $i < strlen($temp); $i++) {
-    for ($j = $i+1; $j <= strlen($temp); $j++) {
+    
+      
+    $formatted = implode(' ',str_split($temp)); 
+     print_r($formatted);
+//     for ($i = 0; $i < strlen($temp); $i++) {
+//     for ($j = $i+1; $j <= strlen($temp); $j++) {
    
-   $stringParts = str_split(substr($temp, $i, $j));
-     sort($stringParts);
-    $tempss=implode('',$stringParts);
-     echo "$tempss"; 
-     echo"\n";
-    }
-    }
+//    $stringParts = str_split(substr($temp, $i, $j));
+//      sort($stringParts);
+//     $tempss=implode('',$stringParts);
+//      echo "$tempss"; 
+//      echo"\n";
+//     }
+//     }
     
 //      function subString($str, $n)  
 //      { 
