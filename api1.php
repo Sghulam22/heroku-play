@@ -74,7 +74,7 @@ $count=sizeof($racks);
 for($i=0;$i<$count;$i++)
 	
 {
-	print_r($racks[$count]);
+	print_r($racks[$i]);
 	echo "\n";
 }
    //this part is perhaps overkill but I wanted to set the HTTP headers and status code
