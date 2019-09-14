@@ -80,7 +80,7 @@ for($i=0;$i<$count;$i++)
    	 $r1= $s2->fetchAll(PDO::FETCH_ASSOC);
 	
 	 print_r($r1[0]["words"]);
-	print_r(strlen($r1[0]["words"]);
+
 	echo "\n";
 }
    //this part is perhaps overkill but I wanted to set the HTTP headers and status code
