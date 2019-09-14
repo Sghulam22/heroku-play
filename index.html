@@ -28,11 +28,15 @@
       }
       
       $("#grabmore").on("click", function(){
-        $.ajax({
-            method: "GET",
-            url: "api1.php",
-            success: data=>{ showRacks(data)}
-        });
+        $.get("api1.php", function(data){
+ 	    showRacks(data);
+ 	  });
+        
+//         $.ajax({
+//             method: "GET",
+//             url: "api1.php",
+//             success: data=>{ showRacks(data)}
+//         });
       });
     });
   </script>
