@@ -51,7 +51,7 @@
     print_r($final);
      print_r("using subset function");
     for ($i = 0; $i < strlen($temp); $i++) {
-    for (int $j = $i+1; $j <= strlen($temp); $j++) {
+    for ($j = $i+1; $j <= strlen($temp); $j++) {
     print_r(substr($temp, $i, $j));
     }
     }
