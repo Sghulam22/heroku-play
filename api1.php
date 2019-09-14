@@ -18,7 +18,7 @@
     //avoid SQL injection attacks 
     $statement = $dbhandle->prepare($query); 
     $statement->execute();
-
+ 
     $s2= $dbhandle->prepare($query2);
     $s2->execute();
     $r1= $s2->fetchAll(PDO::FETCH_ASSOC);
