@@ -71,7 +71,7 @@ print_r($racks);
     
 $count=sizeof($racks);
 
-for($i=0;i<$count;$i++)
+for($i=0;$i<$count;$i++)
 	
 {
 	print_r($racks[$count]);
