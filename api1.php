@@ -22,23 +22,23 @@
     //I chose to get associative arrays inside of a big array
     //this will naturally create a pleasant array of JSON data when I echo in a couple lines
     $word= $statement->fetchAll(PDO::FETCH_ASSOC);
-	print_r($word);
-     print_r("using subset function");
-    
-$racks = [];
-for($i = 0; $i < pow(2, strlen($word)); $i++){
-	$ans = "";
-	for($j = 0; $j < strlen($temp); $j++){
-		//if the jth digit of i is 1 then include letter
-		if (($i >> $j) % 2) {
-		  $ans .= $temp[$j];
+    print_r($word);
+    print_r("using subset function");
+    $temp=$word[0]["rack"];
+    $racks = [];
+	for($i = 0; $i < pow(2, strlen($temp)); $i++)
+	{
+		$ans = "";
+		for($j = 0; $j < strlen($temp); $j++){
+			//if the jth digit of i is 1 then include letter
+			if (($i >> $j) % 2) {
+			  $ans .= $temp[$j];
+			}
+		}
+		if (strlen($ans) > 1){
+		    $racks[] = $ans;	
 		}
 	}
-	if (strlen($ans) > 1){
-  	    $racks[] = $ans;	
-	}
-	
-}
 $racks = array_unique($racks);
 print_r($racks);
     
