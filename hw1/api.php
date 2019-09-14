@@ -20,8 +20,8 @@
     //I chose to get associative arrays inside of a big array
     //this will naturally create a pleasant array of JSON data when I echo in a couple lines
     $word= $statement->fetchAll(PDO::FETCH_ASSOC);
-    print_r($word);
-    print_r("using subset function");
+    //print_r($word);
+    //print_r("using subset function");
     $temp=$word[0]["rack"];
     $racks = [];
 	for($i = 0; $i < pow(2, strlen($temp)); $i++)
@@ -73,8 +73,8 @@ for($i=0;$i<$count;$i++)
  		}
 		
 	}
-	printf("printing final array");
-	print_r($final_a);
+	//printf("printing final array");
+	//print_r($final_a);
    //this part is perhaps overkill but I wanted to set the HTTP headers and status code
     //making to this line means everything was great with this request
     header('HTTP/1.1 200 OK');
