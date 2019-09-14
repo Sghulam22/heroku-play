@@ -24,7 +24,7 @@
     $r1= $s2->fetchAll(PDO::FETCH_ASSOC);
    
     $s3= $dbhandle->prepare($query3);
-    $s3->execute();
+    $s3->execute(); 
     $r2= $s3->fetchAll(PDO::FETCH_ASSOC);
      
     
@@ -70,7 +70,7 @@ $racks = array_unique($racks);
 print_r($racks);
     
 $count=sizeof($racks);
-
+$answers=[];
 for($i=0;$i<$count;$i++)
 	
 {
@@ -80,6 +80,7 @@ for($i=0;$i<$count;$i++)
    	 $r1= $s2->fetchAll(PDO::FETCH_ASSOC);
 	
 	 print_r($r1[0]["words"]);
+	print_r(strlen($r1[0]["words"]);
 	echo "\n";
 }
    //this part is perhaps overkill but I wanted to set the HTTP headers and status code
