@@ -71,8 +71,7 @@ print_r($racks);
     
 $count=sizeof($racks);
 $answers=[];
-for($i=0;$i<$count;$i++)
-	
+for($i=0;$i<$count;$i++)	
 {
 	$query3 = "SELECT rack, words FROM racks WHERE rack='$racks[$i]'";
 	 $s2= $dbhandle->prepare($query3);
@@ -80,9 +79,14 @@ for($i=0;$i<$count;$i++)
    	 $r1= $s2->fetchAll(PDO::FETCH_ASSOC);
 	
 	 print_r($r1[0]["words"]);
-
-	echo "\n";
+	 $temp_var=$r1[0]["words"];
+	if(strlen($temp_var)>0)
+	{
+		$answers[]=$temp_var;
+	}
 }
+
+	print_r($answers);
    //this part is perhaps overkill but I wanted to set the HTTP headers and status code
     //making to this line means everything was great with this request
     header('HTTP/1.1 200 OK');
