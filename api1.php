@@ -52,8 +52,11 @@
      print_r("using subset function");
     for ($i = 0; $i < strlen($temp); $i++) {
     for ($j = $i+1; $j <= strlen($temp); $j++) {
-    print_r(substr($temp, $i, $j));
-     echo "\n"; 
+   
+   $stringParts = str_split(substr($temp, $i, $j));
+     sort($stringParts);
+    $tempss=implode('',$stringParts);
+     echo "$tempss"; 
     }
     }
     
