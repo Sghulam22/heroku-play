@@ -40,7 +40,6 @@
 		}
 	}
 $racks = array_unique($racks);
-print_r($racks);
     
 $count=sizeof($racks);
 $answers=[];
