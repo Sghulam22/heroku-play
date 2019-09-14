@@ -74,7 +74,12 @@ $count=sizeof($racks);
 for($i=0;$i<$count;$i++)
 	
 {
-	print_r($racks[$i]);
+	$query3 = "SELECT rack, words FROM racks WHERE rack='$racks[$i]'";
+	 $s2= $dbhandle->prepare($query3);
+         $s2->execute();
+   	 $r1= $s2->fetchAll(PDO::FETCH_ASSOC);
+	
+	 print_r($r1[0]["words"]);
 	echo "\n";
 }
    //this part is perhaps overkill but I wanted to set the HTTP headers and status code
