@@ -50,7 +50,6 @@ for($i=0;$i<$count;$i++)
          $s2->execute();
    	 $r1= $s2->fetchAll(PDO::FETCH_ASSOC);
 	
-	 print_r($r1[0]["words"]);
 	 $temp_var=$r1[0]["words"];
 	if(strlen($temp_var)>0)
 	{
