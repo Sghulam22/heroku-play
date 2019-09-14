@@ -9,35 +9,22 @@
     //the limit 0, 10 takes the first 10 results.
     // you might want to consider taking more results, implementing "pagination", 
     // ordering by rank, etc.
-    $temp="ABCD"; 
+    
     $query = "SELECT rack, words FROM racks WHERE length=7 and weight <= 10 order by random() limit 0, 1";
-    $query2 = "SELECT rack, words FROM racks WHERE length=7 and weight <= 10 order by random() limit 0, 1";
-    $query3 = "SELECT rack, words FROM racks WHERE rack='$temp'";
      
     //this next line could actually be used to provide user_given input to the query to 
     //avoid SQL injection attacks 
     $statement = $dbhandle->prepare($query); 
     $statement->execute();
- 
-    $s2= $dbhandle->prepare($query2);
-    $s2->execute();
-    $r1= $s2->fetchAll(PDO::FETCH_ASSOC);
-   
-    $s3= $dbhandle->prepare($query3);
-    $s3->execute(); 
-    $r2= $s3->fetchAll(PDO::FETCH_ASSOC);
-     
     
     //The results of the query are typically many rows of data
     //there are several ways of getting the data out, iterating row by row,
     //I chose to get associative arrays inside of a big array
     //this will naturally create a pleasant array of JSON data when I echo in a couple lines
-    $results = $statement->fetchAll(PDO::FETCH_ASSOC);
+    $temp= $statement->fetchAll(PDO::FETCH_ASSOC);
 
      print_r("using subset function");
     
-      
-   
 $racks = [];
 for($i = 0; $i < pow(2, strlen($temp)); $i++){
 	$ans = "";
