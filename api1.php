@@ -21,12 +21,12 @@
     //there are several ways of getting the data out, iterating row by row,
     //I chose to get associative arrays inside of a big array
     //this will naturally create a pleasant array of JSON data when I echo in a couple lines
-    $temp= $statement->fetchAll(PDO::FETCH_ASSOC);
-
+    $word= $statement->fetchAll(PDO::FETCH_ASSOC);
+	print_r($word);
      print_r("using subset function");
     
 $racks = [];
-for($i = 0; $i < pow(2, strlen($temp)); $i++){
+for($i = 0; $i < pow(2, strlen($word)); $i++){
 	$ans = "";
 	for($j = 0; $j < strlen($temp); $j++){
 		//if the jth digit of i is 1 then include letter
