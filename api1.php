@@ -83,22 +83,30 @@ for($i=0;$i<$count;$i++)
 	 $temp_var=$r1[0]["words"];
 	if(strlen($temp_var)>0)
 	{
-		$holder_of_things=explode("@@",$temp_var);
-		if(sizeof($holder_of_things)>1)
-		{
-			for($k=0;$k<sizeof($holder_of_things);$k++)
-			{
-					$answers[]=$holder_of_things[$k];
-			}
-		}
-		else
-		{
-			$answers[]=$holder_of_things;
-		}
-		
+		$answers[]=$temp_var;
 	}
 }
 
+	$final_a=[];
+	for($i=0;$i<sizeof($answers);$i++)
+	{
+		
+ 
+		$holder_of_things=explode("@@",$answers[$i]);
+ 		if(sizeof($holder_of_things)>1)
+ 		{
+ 			for($k=0;$k<sizeof($holder_of_things);$k++)
+ 			{
+ 					$final_a[]=$holder_of_things[$k];
+ 			}
+ 		}
+ 		else
+ 		{
+ 			$final_a[]=$holder_of_things;
+ 		}
+		
+	}
+	print_r($final_a);
 
 	print_r($answers);
    //this part is perhaps overkill but I wanted to set the HTTP headers and status code
