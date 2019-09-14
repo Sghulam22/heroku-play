@@ -53,6 +53,7 @@
     for ($i = 0; $i < strlen($temp); $i++) {
     for ($j = $i+1; $j <= strlen($temp); $j++) {
     print_r(substr($temp, $i, $j));
+     echo "\n"; 
     }
     }
     
