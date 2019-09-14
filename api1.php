@@ -106,6 +106,7 @@ for($i=0;$i<$count;$i++)
  		}
 		
 	}
+	printf("printing final array");
 	print_r($final_a);
 
 	print_r($answers);
