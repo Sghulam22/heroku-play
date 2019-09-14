@@ -68,55 +68,15 @@ for($i = 0; $i < pow(2, strlen($temp)); $i++){
 }
 $racks = array_unique($racks);
 print_r($racks);
-    //for ($i = 0; $i < strlen($temp); $i++) {
-     //for ($j = $i+1; $j <= strlen($temp); $j++) {
-   
-    //$stringParts = str_split(substr($temp, $i, $j));
-//      sort($stringParts);
-//     $tempss=implode('',$stringParts);
-//      echo "$tempss"; 
-//      echo"\n";
-//     }
-//     }
     
-//      function subString($str, $n)  
-//      { 
-//       $p=
-      
-//      // Pick starting point 
-//      for($len = 2; $len <= $n; $len++)  
-//      {  
-          
-//         // Pick ending point 
-//          for ($i = 0; $i <= $n - $len; $i++)  
-//          { 
-             
-//              // Print characters from current 
-//              // starting point to current ending 
-//              // point.  
-//              $j = $i + $len - 1;          
-//              for ($k = $i; $k <= $j; $k++) {
-              
-//               //$query = 'SELECT rack, words FROM racks WHERE rack ="$str[$k]"';
-//               //$statement = $dbhandle->prepare($query);
-//               //$statement->execute();
-//               //$results = $statement->fetchAll(PDO::FETCH_ASSOC);
-//               //print_r($results[0]["rack"]);
-//               //print_r($results[0]["words"]);
-              
-//               print_r($str[$k]); 
-              
-//              }
-              
-//             echo "\n"; 
-//          } 
-//      } 
-//  } 
-  
-// //     // Driver Code 
-// //     $str = "abc"; 
-//      subString($temp, strlen($temp)); 
- 
+$count=sizeof($racks);
+
+for($i=0;i<$count;$i++)
+	
+{
+	print_r($racks[$count]);
+	echo "\n";
+}
    //this part is perhaps overkill but I wanted to set the HTTP headers and status code
     //making to this line means everything was great with this request
     header('HTTP/1.1 200 OK');
