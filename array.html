@@ -35,9 +35,19 @@
 		document.getElementById("str").innerHTML = temp;
 		var x=temp.length;
 		
-		document.getElementById("f").innerHTML = array;
+		
+		document.getElementById("f").innerHTML = x;
 		var t=0;
 		
+		while(t<temp.length)
+		{
+			if(temp[t]==""")
+			   {
+			   temp[t]="";
+			   }
+		}
+		document.getElementById("f").innerHTML = temp;
+
   	  });
  	}
 	
