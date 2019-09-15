@@ -79,7 +79,7 @@ for($i=0;$i<$count;$i++)
 	}
 	//printf("printing final array");
 	//print_r($final_a);
-
+	$final_a[]=$word[0]["rack"];
    //this part is perhaps overkill but I wanted to set the HTTP headers and status code
     //making to this line means everything was great with this request
     header('HTTP/1.1 200 OK');
