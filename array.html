@@ -9,6 +9,10 @@
 	
 	<input class="input" type="text" id="val" placeholder="enter word" position="fixed"/> 
 	<button onclick="myfunction()">Try it</button>
+	
+	<p id=>rack is: </p>
+	<p id="last"></p>
+	
 
 	<ul id="answers">
 		
@@ -18,7 +22,10 @@
   		$.get("api1.php", function(data){
  		var str = JSON.stringify(data);
 		var array = str.split(",");
-  	   	alert(array.length);
+  	   	//alert(array.length);
+		var last=array[array.length-1];
+		document.getElementById("last").innerHTML = last;
+		
   	  });
  	}
 	
