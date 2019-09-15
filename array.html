@@ -1,4 +1,4 @@
-    
+    //put everything in a list and then just take inputs
 <!DOCTYPE html>
 <html>
 <head>
@@ -12,20 +12,29 @@
 	
 	<p id=>rack is: </p>
 	<p id="last"></p>
+	<p id="str"></p>
+	<p id="f"></p>
+	
 	
 
 	<ul id="answers">
 		
 <script>
+	
+	var length;
 	function myfunction() {	
 		
   		$.get("api1.php", function(data){
  		var str = JSON.stringify(data);
 		var array = str.split(",");
-  	   	//alert(array.length);
-		var last=array[array.length-1];
+		length = array.length;
+		var last=array[length-1];
 		document.getElementById("last").innerHTML = last;
 		
+		var temp= array[0];
+		document.getElementById("str").innerHTML = temp;
+		temp.splice(1,temp.length);
+		document.getElementById("f").innerHTML = temp;
   	  });
  	}
 	
