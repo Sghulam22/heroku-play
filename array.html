@@ -41,14 +41,9 @@
 		document.getElementById("f").innerHTML = x;
 		var t=0;
 		
-		while(t<temp.length)
-		{
-			if(temp[t]=='"')
-			   {
-			   	temp.splice(t, 1); 
-			   }
-			t++;
-		}
+		
+		temp.splice(t,str.length); 
+			
 		document.getElementById("r").innerHTML = temp;
 
   	  });
