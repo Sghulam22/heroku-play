@@ -5,18 +5,23 @@
 	<script src='http://code.jquery.com/jquery-1.11.0.min.js'></script>
 	<title>word search</title>
   </head>
-<body onload='myfunction()'> 
+<body>
+	
+	<input class="input" type="text" id="val" placeholder="enter word" position="fixed"/> 
+	<button onclick="myfunction()">Try it</button>
 
+	<ul id="answers">
+		
 <script>
 	function myfunction() {	
 		
-	
-  	$.get("api1.php", function(data){
+  		$.get("api1.php", function(data){
  		var str = JSON.stringify(data);
 		var array = str.split(",");
-  	    alert(array.length);
+  	   	alert(array.length);
   	  });
  	}
+	
 </script>
 
 </body>
