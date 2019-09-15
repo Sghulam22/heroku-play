@@ -10,13 +10,10 @@
 <script>
 	function myfunction() {	
 		
-		$.ajax({
-            method: "GET",
-             url: "api.php",
-             success: data=>{ showRacks(data)}
-//  	$.get("api1.php", function(data){
-// 		var obj = JSON.stringify(data);
-//  	    alert(obj);
+	
+  	$.get("api1.php", function(data){
+ 		var obj = JSON.stringify(data);
+  	    alert(obj);
   	  });
  	}
 </script>
