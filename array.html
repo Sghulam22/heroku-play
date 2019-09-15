@@ -13,7 +13,7 @@
 	
   	$.get("api1.php", function(data){
  		var str = JSON.stringify(data);
-		var array = str.split(" ");
+		var array = str.split(",");
   	    alert(array.length);
   	  });
  	}
