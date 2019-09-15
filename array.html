@@ -12,9 +12,9 @@
 		
 	
   	$.get("api1.php", function(data){
- 		var obj = JSON.stringify(data);
-		var len=obj.length;
-  	    alert(len);
+ 		var str = JSON.stringify(data);
+		var array = str.split(" ");
+  	    alert(array.length);
   	  });
  	}
 </script>
