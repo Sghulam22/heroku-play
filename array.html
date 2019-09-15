@@ -13,7 +13,8 @@
 	
   	$.get("api1.php", function(data){
  		var obj = JSON.stringify(data);
-  	    alert(obj);
+		var len=obj.length;
+  	    alert(len);
   	  });
  	}
 </script>
