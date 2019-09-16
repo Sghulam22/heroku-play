@@ -42,13 +42,16 @@
 		var answers_array = new Array(array.length-1);
 		
 		var count=1;
-		//while(count<answers_array.length)
-	//	{
+		var index=0;
+		while(count<answers_array.length)
+		{
 			temp=array[count];
 			res=temp.substr(1, x-3);
-			//count++;	
-	//	}
-		document.getElementById("r").innerHTML = res;
+			answers_array[index]=res;
+			index++
+			count++;
+		}
+		document.getElementById("r").innerHTML = answers_array;
 
   	  });
  	}
