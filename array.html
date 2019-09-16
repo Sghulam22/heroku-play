@@ -37,11 +37,16 @@
 		document.getElementById("f").innerHTML = array;
 		
 		
-		var res = str.substr(2, x-3);
+		var res = temp.substr(2, x-3);
 		
-		var arr = new Array(array.length-1);
+		var answers_array = new Array(array.length-1);
 		
-		document.getElementById("r").innerHTML = arr.length;
+		var count=1;
+		while(count<answers_array.length)
+		{
+			count++;	
+		}
+		document.getElementById("r").innerHTML = res;
 
   	  });
  	}
