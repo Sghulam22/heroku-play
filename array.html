@@ -42,13 +42,15 @@
 		var answers_array = new Array(array.length-1);
 		
 		var count=1;
-		answers_array[0]=res;
+		var index=0;
+	
 		while(count<answers_array.length)
 		{
 			temp=array[count];
 			res=temp.substr(1, x-1);
-			answers_array[count]=res;
+			answers_array[index]=res;
 			count++;
+			index++;
 		}
 		document.getElementById("r").innerHTML = answers_array;
 
