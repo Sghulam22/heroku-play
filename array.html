@@ -46,16 +46,19 @@
 		var answers_array = new Array(array.length-1);
 		
 		var count=1;
-		var index=0;
-	
+		temp=array[0];
+		x= temp.length;
+		res=temp.substr(1, x-2);
+		answers_array[0]=res;
+		
 		while(count<answers_array.length)
 		{
 			temp=array[count];
 			x=temp.length;
 			res=temp.substr(1, x-2);
-			answers_array[index]=res;
+			answers_array[count]=res;
 			count++;
-			index++;
+			
 		}
 		document.getElementById("r").innerHTML = answers_array;
 
