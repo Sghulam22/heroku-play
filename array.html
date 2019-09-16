@@ -8,9 +8,12 @@
   </head>
 <body>
 	
-	<input class="input" type="text" id="val" placeholder="enter word" position="fixed"/> 
-	<button type="button" class="btn btn-dark" onclick="myfunction()">Get word</button>
-	
+	<div class="input-group mb-3">
+  		<input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2">
+  		<div class="input-group-append">
+    		<button class="btn btn-outline-secondary" type="button" onclick="myfunction()">Get word</button>
+  		</div>
+	</div>
 	<p id=>rack is: </p>
 	<p id="last">...</p>
 	<p id="str">...</p>
