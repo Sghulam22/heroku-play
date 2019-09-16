@@ -16,9 +16,6 @@
 	<p id="f">...</p>
 	<p id="r">...</p>
 
-	
-	
-
 	<ul id="answers">
 		
 <script>
@@ -37,14 +34,12 @@
 		document.getElementById("str").innerHTML = temp;
 		var x=temp.length;
 		
-		
 		document.getElementById("f").innerHTML = x;
-		var t=0;
 		
 		
-		temp.splice(t,str.length); 
+		var res = str.substr(2, x-2);
 			
-		document.getElementById("r").innerHTML = temp;
+		document.getElementById("r").innerHTML = res;
 
   	  });
  	}
