@@ -6,14 +6,13 @@
     text-align: center;
     text-transform: uppercase;
     text-rendering: optimizeLegibility;
-    
-    
 }
 
 body{
-    background-image: url("wordwallpaper.jpg");
+    background-image: url("clear.png");
     background-position:fixed;
     background-size: cover;
+    opacity:.9;
     }
 
     .newclass{
@@ -49,16 +48,22 @@ body{
             margin: auto;
 
         }
-
-        li{
-            white-space:nowrap;
-            display:inline-block;
-            margin: 0 0 20px 20px;
-        }
         
         .answersdiv{
             text-align:center;
         }
         
-
+#game
+{
+	margin-top:10px;
+	width: 66%;
+	padding-top: 25%;
+	background-image: url("clear.png");
+	opacity: 0.9;
+	border-radius: 15px;
+	border-style:outset;
+	border-width: 5px;
+	border-color:#f7e7ce;
+	box-shadow: 0px 0px 25px #f7e7ce;
+}
         
