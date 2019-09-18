@@ -26,7 +26,8 @@
   		<input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2">
 	</div>  
 		  <div class="input-group-append">
-    		<button class="btn btn-dark" type="button" onclick="myfunction()">Get word</button>
+			<button class="btn btn-dark" type="button" onclick="myfunction()">Start</button>
+			<button class="btn btn-dark" type="button" onclick="myfunction2()">check word</button>
   		</div>
 	</div>
 </div>
@@ -74,6 +75,7 @@
 
   	  });
  	}
+	 function myfunction2(){
 	 var fistInput = document.getElementById("last").value;
 var secondInput = document.getElementById("str").value;
 var secondInput = document.getElementById("f").value;
@@ -89,6 +91,7 @@ if (firstInput === secondInput) {
 } else {
   // give an alert or something to signify that word is not in array
 }
+	 }
 	
 </script>
 
