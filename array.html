@@ -1,26 +1,36 @@
-    //put everything in a list and then just take inputs
+
 <!DOCTYPE html>
 <html>
 <head>
+		<link rel="stylesheet" href="array.css"> 
 	<script src='http://code.jquery.com/jquery-1.11.0.min.js'></script>
 	<title>word search</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   </head>
 <body>
-	
+	<h1 class = "title">Welcome to our Text Twist</h1>
+	<div class = "answersdiv">
+		<ul>
+			<li><h2>=>rack is: </h2></li>
+			<li><h2 id="last">...&emsp; 	</h2></li>
+			<li><h2 id="str">...&emsp;	</h2></li>
+			<li><h2 id="f">...&emsp;	</h2></li>
+			<li><h2 id="r">...&emsp;	</h2></li>
+			</ul>
+			<br/>
+		</div>
+			<ul id="answers">
+
+	<div class="newclass">
 	<div class="input-group mb-3">
   		<input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2">
-  		<div class="input-group-append">
+	</div>  
+		  <div class="input-group-append">
     		<button class="btn btn-dark" type="button" onclick="myfunction()">Get word</button>
   		</div>
 	</div>
-	<p id=>rack is: </p>
-	<p id="last">...</p>
-	<p id="str">...</p>
-	<p id="f">...</p>
-	<p id="r">...</p>
+</div>
 
-	<ul id="answers">
 		
 <script>
 	
@@ -64,6 +74,21 @@
 
   	  });
  	}
+	 var fistInput = document.getElementById("last").value;
+var secondInput = document.getElementById("str").value;
+var secondInput = document.getElementById("f").value;
+var secondInput = document.getElementById("r").value;
+
+if (firstInput === secondInput) {
+    // do something here if inputs are same
+	//we can set this equal to the array to verify if the word is in the rack
+
+
+} else if (firstInput > secondInput) {
+    // do the same for first input but with second input == array
+} else {
+  // give an alert or something to signify that word is not in array
+}
 	
 </script>
 
