@@ -10,6 +10,7 @@
 <body>
 	<h1 class = "title">Welcome to our Text Twist</h1>
 	<div class = "answersdiv">
+		<p id = "WordRack">... </p> 
 		<ul>
 			<li><h2>=>rack is: </h2></li>
 			<li><h2 id="last">...&emsp; 	</h2></li>
@@ -43,9 +44,11 @@
 		var array = str.split(",");
 		length = array.length;
 		var last=array[length-1];
-		document.getElementById("last").innerHTML = last;
+		last = last.substr(1,last.length-3);
+		document.getElementById("WordRack").innerHTML = last;
 		
 		var temp= array[0];
+			
 		document.getElementById("str").innerHTML = array.length;
 		var x=temp.length;
 		
