@@ -53,6 +53,7 @@
 				string=string+"*"+arr[i]+"*  ";
 				arr[i]="erased/null";
 				check=1;
+				alert("CORRECT!!");
 				
 			}
 			i++;
