@@ -43,7 +43,7 @@
 
 	function game(){
 	
-		var in=document.getElementById("input");
+		var in=document.getElementById("input").value;
 		var i=0;
 		var check=0;
 		while(i<arr.length()
