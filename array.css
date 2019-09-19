@@ -14,6 +14,7 @@ body{
 
 h1{
 	text-align:center;
+	text-decoration:underline;
 	}
                
 .answersdiv
@@ -23,7 +24,7 @@ h1{
 	padding-top: 25%;
 	margin: 0 auto;
 	background-image: url("grey.jpg");
-	opacity: 0.9;
+	opacity: 0.8;
 	border-radius: 15px;
 	border-style:outset;
 	border-width: 3px;
