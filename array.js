@@ -1,5 +1,5 @@
 	var length;
-	var arr[];
+	var arr=[];
   
 	function loadrack() {	
 		
