@@ -4,6 +4,11 @@
 	height: 60px;
 }
 
+#inputs{
+    height: 10em;
+    position: relative; }	
+
+
 
 body{
     background-image: url("clear.png");
