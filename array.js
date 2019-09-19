@@ -13,7 +13,7 @@
 		var temp= array[0];
 		var x=temp.length;
 		
-		document.getElementById("f").innerHTML = array;
+		//document.getElementById("f").innerHTML = array;
 		
 		var res = temp.substr(2, x-3);
 		var answers_array = new Array(array.length-1);
