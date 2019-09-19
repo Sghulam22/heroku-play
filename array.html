@@ -2,52 +2,52 @@
 <!DOCTYPE html>
 <html>
 <head>
-		<link rel="stylesheet" href="array.css"> 
+	<link rel="stylesheet" href="array.css"> 
 	<script src='http://code.jquery.com/jquery-1.11.0.min.js'></script>
 	<title>word search</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   </head>
 <body>
-	<h1 class = "title">Welcome to our Text Twist</h1>
+	<nav class="navbar navbar-dark bg-dark">
+  		<h1 class = "title">Welcome to our Text Twist</h1>
+	</nav>
+	<br/>
+	<h1 id = "rack">... </h1> 
+	
+	<div id ="results"></div>
+	
+	<ul id="answers">
 	<div class = "answersdiv">
-		<p id = "WordRack">... </p> 
-
-		
-		
-		<!-- 		<ul>
-			<li><h2>=>rack is: </h2></li>
-			<li><h2 id="last">...&emsp; 	</h2></li>
-			<li><h2 id="str">...&emsp;	</h2></li>
-			<li><h2 id="f">...&emsp;	</h2></li>
-			<li><h2 id="r">...&emsp;	</h2></li>
-			</ul>
-			<br/>
-		</div> -->
-			<ul id="answers">
-
 	<div class="newclass">
+		
 	<div class="input-group mb-3">
-  		<input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2">
+  		<input id="input" type="text" class="form-control" placeholder="Enter Word" aria-label="Recipient's username" aria-describedby="basic-addon2">
+		<button class="btn btn-dark" type="button" onclick="myfunction()">check word</button>
 	</div>  
-		  <div class="input-group-append">
-			<button class="btn btn-dark" type="button" onclick="myfunction()">Start</button>
-			//<button class="btn btn-dark" type="button" onclick="myfunction2()">check word</button>
-  		</div>
 	</div>
 </div>
 
 		
 <script>
-	
 	var length;
-	function myfunction() {	
-		
-  		$.get("api1.php", function(data){
+	var correct="";
+	
+	$.get("api1.php", function(data){
  		var str = JSON.stringify(data);
 		var array = str.split(",");
 		length = array.length;
 		var last=array[length-1];
 		document.getElementById("last").innerHTML =last;
+		)}
+	      
+	function myfunction() {	
+		
+//   		$.get("api1.php", function(data){
+//  		var str = JSON.stringify(data);
+// 		var array = str.split(",");
+// 		length = array.length;
+// 		var last=array[length-1];
+// 		document.getElementById("last").innerHTML =last;
 
 		last = last.substr(1,last.length-3);
 		document.getElementById("WordRack").innerHTML = last;
@@ -61,7 +61,6 @@
 		
 		
 		var res = temp.substr(2, x-3);
-		
 		var answers_array = new Array(array.length-1);
 		
 		var count=1;
@@ -79,30 +78,23 @@
 			count++;
 			
 		}
+			count=0;
 		document.getElementById("r").innerHTML = answers_array;
-
-  	  });
- 	}
+		
+		var value_entered = document.getElementById("input").value;
 			
-	
-// 	 function myfunction2(){
-// 	 var fistInput = document.getElementById("last").value;
-// var secondInput = document.getElementById("str").value;
-// var secondInput = document.getElementById("f").value;
-// var secondInput = document.getElementById("r").value;
+// 		while(count<answers_array.length)
+// 		{
+// 			if(value_entered==answers_array[count])
+// 			{
+// 				correct= correct+"*"+answers_array[count]+"*  ";
+// 				//correctWords[i]="erased/null";
+// 			}
+// 		}
+		
+  	
+ 	}
 
-// if (firstInput === secondInput) {
-    
-// 	//we can set this equal to the array to verify if the word is in the rack
-
-
-// } else if (firstInput > secondInput) {
-//     // do the same for first input but with second input == array
-// } else {
-//   // give an alert or something to signify that word is not in array
-// }
-// 	 }
-	
 </script>
 
 </body>
