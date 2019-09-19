@@ -46,7 +46,7 @@
 		var x=document.getElementById("input").value;
 		var i=0;
 		var check=0;
-		while(i<arr.length()
+		while(i<arr.length)
 		{
 		 	if(x==arr[i])
 			{
