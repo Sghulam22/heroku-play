@@ -17,13 +17,13 @@
 		
 		//document.getElementById("f").innerHTML = array;
 		
-		var res = temp.substr(2, x-3);
+		//var res = temp.substr(3, x-3);
 		var answers_array = new Array(array.length-1);
 		
 		var count=1;
 		temp=array[0];
 		x= temp.length;
-		res=temp.substr(1, x-2);
+		var res=temp.substr(2, x-2);
 		answers_array[0]=res;
 		
 		while(count<answers_array.length)
