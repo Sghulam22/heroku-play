@@ -23,7 +23,7 @@
 		var count=1;
 		temp=array[0];
 		x= temp.length;
-		var res=temp.substr(2, x-2);
+		var res=temp.substr(3, x-2);
 		answers_array[0]=res;
 		
 		while(count<answers_array.length)
