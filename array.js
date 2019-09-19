@@ -43,4 +43,4 @@
 		document.getElementById("r").innerHTML = arr;
   	  });
  	}
-	 
+	 window.addEventListener("load",loadrack,false);
