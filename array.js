@@ -2,7 +2,6 @@
 	var arr=[];
   
 	function loadrack() {	
-		
   		$.get("api1.php", function(data){
  		var str = JSON.stringify(data);
 		var array = str.split(",");
@@ -35,7 +34,7 @@
 			
 		}
     		arr=answers_array;
-		document.getElementById("r").innerHTML = arr;
+		document.getElementById("results").innerHTML = arr;
   	  });
  	}
 	 window.addEventListener("load",loadrack,false);
