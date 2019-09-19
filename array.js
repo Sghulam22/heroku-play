@@ -8,7 +8,6 @@
 		var array = str.split(",");
 		length = array.length;
 		var last=array[length-1];
-		document.getElementById("last").innerHTML =last;
 		last = last.substr(1,last.length-3);
 		document.getElementById("WordRack").innerHTML = last;
 		
@@ -39,7 +38,7 @@
 			count++;
 			
 		}
-    arr=answers_array;
+    		arr=answers_array;
 		document.getElementById("r").innerHTML = arr;
   	  });
  	}
