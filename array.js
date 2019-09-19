@@ -43,12 +43,12 @@
 
 	function game(){
 	
-		var in=document.getElementById("input").value;
+		var x=document.getElementById("input").value;
 		var i=0;
 		var check=0;
 		while(i<arr.length()
 		{
-		 	if(in==arr[i])
+		 	if(x==arr[i])
 			{
 				string=string+"*"+arr[i]+"*  ";
 				arr[i]="erased/null";
@@ -62,7 +62,7 @@
 		{
 		while(i<recheck.length)
 		  {
-			if(in==recheck[i])
+			if(x==recheck[i])
 			{
 				check=1;
 			}
