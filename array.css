@@ -35,5 +35,7 @@ h1{
 }
 #results{
 	position: absolute;
+	overflow-wrap: normal;
 	top: 10%;
 }
+
