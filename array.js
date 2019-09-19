@@ -9,18 +9,14 @@
 		length = array.length;
 		var last=array[length-1];
 		last = last.substr(1,last.length-3);
-		document.getElementById("WordRack").innerHTML = last;
+		document.getElementById("rack").innerHTML = last;
 		
 		var temp= array[0];
-			
-		document.getElementById("str").innerHTML = array.length;
 		var x=temp.length;
 		
 		document.getElementById("f").innerHTML = array;
 		
-		
 		var res = temp.substr(2, x-3);
-		
 		var answers_array = new Array(array.length-1);
 		
 		var count=1;
