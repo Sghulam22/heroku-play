@@ -1,7 +1,7 @@
 #head{
 	
 	text-align:center;
-	height: 45px;
+	height: 60px;
 }
 
 
@@ -12,16 +12,9 @@ body{
     opacity:.8;
     }
 
-           
+               
 .answersdiv
 {
-	text-align:center;
-	margin: auto;
-}
-        
-#answersdiv
-{
-	margin:auto;
 	width: 400px;
 	height: 200px;
 	padding-top: 25%;
