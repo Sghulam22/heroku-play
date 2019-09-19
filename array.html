@@ -9,26 +9,22 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   </head>
 <body>
-	<nav class="navbar navbar-dark bg-dark">
+	<nav class="navbar navbar-dark bg-dark" id="head">
   		<h1 class = "title">Welcome to our Text Twist</h1>
 	</nav>
 	<br/>
-	<h1 id = "rack">... </h1> 
-	<h1 id= "r">.......</h1>
-	<h1 id= "f">.......</h1>
-	<div id ="results"></div>
 	
-	<ul id="answers">
-	<div class = "answersdiv">
-	<div class="newclass">
-		
-	<div class="input-group mb-3">
+	
+	<h1 id = "rack" text-align="center">... </h1> 
+<!-- 	<h1 id= "r">.......</h1>
+	<h1 id= "f">.......</h1>
+	<div id ="results"></div> -->
+	
+	<div class = "answersdiv"><h3 id="results">...</h3></div>
+	<div id="submit">
   		<input id="input" type="text" class="form-control" placeholder="Enter Word" aria-label="Recipient's username" aria-describedby="basic-addon2">
 		<button class="btn btn-dark" type="button" onclick="myfunction()">check word</button>
 	</div>  
-	</div>
-</div>
-		
-		<button class="btn btn-dark" type="button" onclick="loadrack()">check word</button>
+			
 </body>
 </html>
