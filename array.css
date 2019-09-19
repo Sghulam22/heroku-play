@@ -25,7 +25,7 @@ h1{
 	height: 200px;
 	padding-top: 25%;
 	margin: 0 auto;
-	
+	word-break: break-all;
 	opacity: 0.8;
 	border-radius: 15px;
 	border-style:outset;
@@ -35,7 +35,18 @@ h1{
 }
 #results{
 	position: absolute;
-	overflow-wrap: normal;
 	top: 10%;
+}
+#checkButton{
+	position: absolute;
+	top:80%;
+	left: 35%;
+}
+#textBox{
+	position: absolute;
+	top:80%;
+	width:30%;
+	left: 35%;
+	margin-left: 10%;
 }
 
