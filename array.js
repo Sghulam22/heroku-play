@@ -1,5 +1,7 @@
 	var length;
 	var arr=[];
+	var recheck = [];
+	var string="";
   
 	function loadrack() {	
   		$.get("api1.php", function(data){
@@ -34,7 +36,47 @@
 			
 		}
     		arr=answers_array;
+		recheck=arr;
 		document.getElementById("results").innerHTML = arr;
   	  });
  	}
+
+	function game(){
+	
+		var in=document.getElementById("input");
+		var i=0;
+		var check=0;
+		while(i<arr.length()
+		{
+		 	if(in==arr[i])
+			{
+				string=string+"*"+arr[i]+"*  ";
+				arr[i]="erased/null";
+				check=1;
+				i++;
+			}
+		 }
+		i=0;
+
+		if (check==0)
+		{
+		while(i<recheck.length)
+		  {
+			if(in==recheck[i])
+			{
+				check=1;
+			}
+			i++;
+			}
+			if(check==1)
+			{
+				alert("you have already entered this word");
+			}
+			else if(check ==0){
+				alert("incorrect try again please");
+			}
+		}     
+		document.getElementById("results").innerHTML = string;
+		    	
+	}
 	 window.addEventListener("load",loadrack,false);
