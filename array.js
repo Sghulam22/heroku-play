@@ -58,7 +58,7 @@
 		
 		if(check==0)
 		{
-			alert("TRY AGAIN");	
+			alert("TRY AGAIN, MAKE SURE YOU ENTER WITH ALL CAPS!!");	
 		}
 		document.getElementById("results").innerHTML = string;
 		document.getElementById("left").innerHTML = left;
