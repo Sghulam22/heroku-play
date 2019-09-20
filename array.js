@@ -25,7 +25,7 @@
 		x= temp.length;
 		var res=temp.substr(2, x-3);
 		answers_array[0]=res;
-		document.getElementById("first").innerHTML = res;
+
 		
 		while(count<answers_array.length)
 		{
