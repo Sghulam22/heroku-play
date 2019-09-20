@@ -32,7 +32,7 @@
 			count++;	
 		}
     		arr=answers_array;
-		left=answers_array.length;
+		left=arr.length;
   	  });
  	}
 
