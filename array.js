@@ -1,5 +1,6 @@
 	var length;
 	var arr=[];
+	var left;
 	var string="";
   
 	function loadrack() {	
@@ -31,6 +32,7 @@
 			count++;	
 		}
     		arr=answers_array;
+		left=answers_array.length;
   	  });
  	}
 
@@ -47,15 +49,18 @@
 				arr[i]="erased/null";
 				alert("CORRECT!!");
 				check=1;
+				left--;
 			}
 			i++;
 		 }
-
+		
 		if(check==0)
 		{
 			alert("TRY AGAIN");	
 		}
 		document.getElementById("results").innerHTML = string;
+		document.getElementById("left").innerHTML = left;
+		
 		    	
 	}
 	 window.addEventListener("load",loadrack,false);
