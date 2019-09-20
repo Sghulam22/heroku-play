@@ -33,9 +33,10 @@ height :25%;
 
 
 #refresh{
-	margin-left: 50%;
+	margin-left: 45%;
 	position:absolute;
 	width:110px;
+	margin-top:10px;
 	height:40px;
 	
 }
