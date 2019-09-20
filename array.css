@@ -31,16 +31,12 @@ width:30%;
 height :25%;
 }	
 
-#refresh
-{
-	width:90px;
-	height:40px;
-
-}
 
 #refresh{
-	margin-left: 40%;
+	margin-left: 50%;
 	position:absolute;
+	width:110px;
+	height:40px;
 	
 }
 
