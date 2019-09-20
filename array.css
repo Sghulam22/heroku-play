@@ -23,7 +23,7 @@ h1{
 	}
                
 .answersdiv
-{	
+{	background-image: url("grey.jpg");
 	left: 35%;
 	width: 400px;
 	height: 200px;
