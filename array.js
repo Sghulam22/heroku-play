@@ -38,6 +38,7 @@
 	
 		var x=document.getElementById("input").value;
 		var i=0;
+		var check=0;
 		while(i<arr.length)
 		{
 		 	if(x==arr[i])
@@ -45,10 +46,15 @@
 				string=string+"*"+arr[i]+"*  ";
 				arr[i]="erased/null";
 				alert("CORRECT!!");
+				check=1;
 			}
 			i++;
 		 }
 
+		if(check==0)
+		{
+			alert("TRY AGAIN");	
+		}
 		document.getElementById("results").innerHTML = string;
 		    	
 	}
