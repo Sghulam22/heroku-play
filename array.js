@@ -31,7 +31,6 @@
 			count++;	
 		}
     		arr=answers_array;
-		document.getElementById("results").innerHTML = arr;
   	  });
  	}
 
