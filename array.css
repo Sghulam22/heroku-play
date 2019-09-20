@@ -47,12 +47,13 @@ height :25%;
 .answersdiv
 {
 	position:relative;
+	background-color:white
 	width: 400px;
 	height: 200px;
 	padding-top: 25%;
 	margin: 0 auto;
 	word-break: break-all;
-	opacity: 0.8;
+	opacity: 0.6;
 	border-radius: 15px;
 	border-style:outset;
 	border-width: 3px;
