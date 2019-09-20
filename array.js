@@ -33,6 +33,8 @@
 		}
     		arr=answers_array;
 		left=arr.length;
+		document.getElementById("left").innerHTML = left;
+
   	  });
  	}
 
