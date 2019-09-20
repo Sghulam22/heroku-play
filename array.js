@@ -60,6 +60,12 @@
 		{
 			alert("TRY AGAIN, MAKE SURE YOU ENTER WITH ALL CAPS!!");	
 		}
+		
+		if(left==0)
+		{
+			alert("YOU WON ");	
+		}
+		
 		document.getElementById("results").innerHTML = string;
 		document.getElementById("left").innerHTML = left;
 		
